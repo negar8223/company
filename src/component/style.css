@@ -1,0 +1,43 @@
+.paperStyle{
+    height: 600px;
+    margin-top: 50px;
+    background-color: rgb(218, 224, 224);
+}
+.center{
+    text-align: center;
+}
+.marginTopPaper{
+    margin-top: 70px;
+}
+.topBarHeigth{
+    height: 60px;
+}
+.textMargin{
+    margin-bottom: 8px;
+}
+#capsuleButoon:hover{
+background-color: red;
+}
+#buttonHover:hover{
+    border: 2px solid #ccd5ae;
+    border-radius: 50%;
+    color: #ccd5ae;
+}
+.capsulesStyle{
+    margin-top: 70px;
+}
+.capsuleTextStyle{
+    display: inline;
+}
+.dateStyle{
+    margin-top: 20px;
+}
+#button:hover{
+    /* border: 2px solid #6a6e5c; */
+    border-radius: 50%;
+    color: #ccd5ae;
+    background-color: rgb(104, 133, 97);
+}
+.marginCrewCapacity{
+    margin-top: 20px;
+}

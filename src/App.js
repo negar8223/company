@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Dashboard } from "./component/Dashboard";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./graphql/client";
+import { TopBar } from "./component/TopBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Capsules from "./component/Capsules";
+import Capsule from "./component/Capsule";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      {/* <TopBar /> */}
+      <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/capsules" element={<Capsules />}></Route>
+        <Route path="/capsule/:capsuleId" element={<Capsule />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 }
-
 export default App;
